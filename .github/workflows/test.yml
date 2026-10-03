@@ -1,0 +1,14 @@
+name: test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv run --with pytest pytest -q tests
+      - run: ./bin/ugd --help && for g in scan kb release shot; do ./bin/ugd $g --help > /dev/null; done
+      - name: knowledge base
+        run: ./bin/ugd kb check --index
+      - name: nothing that shouldn't ship
+        run: ./bin/ugd release check .

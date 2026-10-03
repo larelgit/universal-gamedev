@@ -1,0 +1,21 @@
+[project]
+name = "universal-gamedev"
+version = "0.1.0"
+description = "Tools and a shared knowledge base for AI agents that make games: project scanner, field notes, release lint, golden-image checks."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6",
+    "pillow>=10",
+]
+
+[project.scripts]
+ugd = "ugd.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ugd"]

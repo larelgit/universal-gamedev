@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+uv.lock
+.env
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+# captures and scratch
+*.mkv
+*.audio.raw
+/scratch/
+# per-clone skill links (tools/link-skills.*)
+/.claude/skills
+/.agents/skills
+/.gemini/skills
+/.github/skills

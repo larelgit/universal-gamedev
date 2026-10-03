@@ -1,0 +1,20 @@
+{
+  "name": "universal-gamedev",
+  "interface": {
+    "displayName": "universal-gamedev"
+  },
+  "plugins": [
+    {
+      "name": "universal-gamedev",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/larelgit/universal-gamedev.git"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

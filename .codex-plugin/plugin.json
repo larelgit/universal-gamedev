@@ -1,0 +1,49 @@
+{
+  "name": "universal-gamedev",
+  "version": "0.1.0",
+  "description": "Make a game in almost any engine with an AI agent: planning and engine choice, the core loop first, fal-generated art/3D/audio, automated playtesting with real oracles, game feel, builds, trailers, release, and a shared knowledge base of how games were built.",
+  "author": {
+    "name": "larelgit",
+    "url": "https://github.com/larelgit"
+  },
+  "homepage": "https://github.com/larelgit/universal-gamedev",
+  "repository": "https://github.com/larelgit/universal-gamedev",
+  "license": "MIT",
+  "keywords": [
+    "game-development",
+    "gamedev",
+    "godot",
+    "unity",
+    "unreal",
+    "phaser",
+    "bevy",
+    "pygame",
+    "playtesting",
+    "fal",
+    "sprites",
+    "game-assets",
+    "knowledge-base",
+    "mcp",
+    "agent-skills"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "universal-gamedev",
+    "shortDescription": "Make a game in any engine",
+    "longDescription": "Make a game in almost any engine with an AI agent: planning and engine choice, the core loop first, fal-generated art/3D/audio, automated playtesting with real oracles, game feel, builds, trailers, release, and a shared knowledge base of how games were built.",
+    "developerName": "larelgit",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/larelgit/universal-gamedev",
+    "defaultPrompt": [
+      "Make a small game in the browser with fal-generated pixel art",
+      "Which engine should I use for this game, and why?",
+      "Write tests that prove this game feature works"
+    ],
+    "screenshots": []
+  }
+}

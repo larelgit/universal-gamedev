@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Runs universal-modder's `um` CLI (fal assets, sprites, 3D-to-sprite renders, window capture and input,
+# video editing), which universal-gamedev reuses rather than copies. It prefers any other `um` on PATH (an
+# installed universal-modder); otherwise it runs a pinned commit through `uvx`, cached after the first run.
+# Install it permanently with:  uv tool install git+https://github.com/rehan-remade/universal-modder
+# Override the pinned commit with UM_REF=<commit, tag or branch>.
+set -euo pipefail
+UM_REF="${UM_REF:-15d6f9d5fbd32de9b1884f29ddec3be9133bd912}"
+SELF="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+IFS=: read -r -a dirs <<< "$PATH"
+for d in "${dirs[@]}"; do
+  [ -z "$d" ] && continue
+  [ "$(cd -P "$d" 2>/dev/null && pwd)" = "$SELF" ] && continue
+  if [ -f "$d/um" ] && [ -x "$d/um" ]; then exec "$d/um" "$@"; fi
+  if [ -f "$d/um.exe" ]; then exec "$d/um.exe" "$@"; fi
+done
+if ! command -v uvx >/dev/null 2>&1; then
+  echo "um: needs uv (https://docs.astral.sh/uv/), or install it: uv tool install git+https://github.com/rehan-remade/universal-modder" >&2
+  exit 1
+fi
+exec uvx --from "git+https://github.com/rehan-remade/universal-modder@${UM_REF}" um "$@"

@@ -1,0 +1,22 @@
+{
+  "name": "universal-gamedev",
+  "version": "0.1.0",
+  "description": "Make a game in almost any engine with an AI agent: planning and engine choice, the core loop first, fal-generated art/3D/audio, automated playtesting with real oracles, game feel, builds, trailers, release, and a shared knowledge base of how games were built.",
+  "contextFileName": "AGENTS.md",
+  "mcpServers": {
+    "fal": {
+      "httpUrl": "https://mcp.fal.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer ${FAL_KEY}"
+      }
+    }
+  },
+  "settings": [
+    {
+      "name": "fal API key",
+      "description": "Key for fal (https://fal.ai/dashboard/keys): game assets via the MCP server and `um fal`.",
+      "envVar": "FAL_KEY",
+      "sensitive": true
+    }
+  ]
+}

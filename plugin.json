@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "universal-gamedev",
+  "version": "0.1.0",
+  "description": "Make a game in almost any engine with an AI agent: planning and engine choice, the core loop first, fal-generated art/3D/audio, automated playtesting with real oracles, game feel, builds, trailers, release, and a shared knowledge base of how games were built.",
+  "author": {
+    "name": "larelgit",
+    "url": "https://github.com/larelgit"
+  },
+  "homepage": "https://github.com/larelgit/universal-gamedev",
+  "repository": "https://github.com/larelgit/universal-gamedev",
+  "license": "MIT",
+  "keywords": [
+    "game-development",
+    "gamedev",
+    "godot",
+    "unity",
+    "unreal",
+    "phaser",
+    "bevy",
+    "pygame",
+    "playtesting",
+    "fal",
+    "sprites",
+    "game-assets",
+    "knowledge-base",
+    "mcp",
+    "agent-skills"
+  ]
+}
